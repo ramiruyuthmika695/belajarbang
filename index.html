@@ -22,7 +22,7 @@ Shopify.routes.root = "/";</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
 <script integrity="sha256-EGCDRYTvIEOXsReXgqGwkAR+5Dl8tickSrieA/ZcQwc=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//velvosa.com/cdn/shopifycloud/shopify/assets/storefront/load_feature-1060834584ef204397b1179782a1b090047ee4397cb627244ab89e03f65c4307.js" crossorigin="anonymous"></script>
-<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="'$UBAH_URL$LIST/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="'$LIST/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
 </script>
 <script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
   function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
@@ -47,14 +47,14 @@ Shopify.routes.root = "/";</script>
 <meta property="product:currency" content="IDR" />
 <meta property="product:retailer_item_id" content="415" />
 <meta property="twitter:card" content="product" /> 
-<meta property="twitter:site" content="$UBAH_URL$LIST" />
+<meta property="twitter:site" content="$LIST" />
 <meta property="twitter:title" content="$LIST : $UBAH_TITLE" />
 <meta property="twitter:description" content="$UBAH_DESK" />
-<meta property="twitter:creator" content="$UBAH_URL$LIST" />
+<meta property="twitter:creator" content="$LIST" />
 <meta property="twitter:type" content="product" />
-<meta property="twitter:url" content="$UBAH_URL$LIST" />
-<meta property="twitter:image:'$UBAH_URL$LIST/" content="https://i.ibb.co/0jB3RrZV/SCAN-ME.png" />
-<link rel="canonical" href="'$UBAH_URL$LIST/" />
+<meta property="twitter:url" content="$LIST" />
+<meta property="twitter:image:'$LIST/" content="https://i.ibb.co/0jB3RrZV/SCAN-ME.png" />
+<link rel="canonical" href="$UBAH_URL$LIST/" />
 <link rel="amphtml" href="$UBAH_AMP" />
 <script type="text/javascript" src="https://www.k24klik.com/assets/7301462e/jquery.min.js"></script>
 <script type="text/javascript">
@@ -274,7 +274,7 @@ background-color: #00A445;
 </style>
 <link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
 <script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 62892834895,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "index"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
-<script id="web-pixels-manager-setup">(function d(d,e,n,o,r,i){if(!Boolean(null===(t=null===(a=window.Shopify)||void 0===a?void 0:a.analytics)||void 0===t?void 0:t.replayQueue)){var a,t,s=function(){var d={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},e=d.modern,n=d.legacy,o=navigator.userAgent;return e.test(o)?"modern":(n.test(o),"legacy")}(),l=null!=i?i:{modern:"",legacy:""};window.Shopify=window.Shopify||{};var u=window.Shopify;u.analytics=u.analytics||{};var c=u.analytics;c.replayQueue=[],c.publish=function(d,e,n){return c.replayQueue.push([d,e,n]),!0};try{self.performance.mark("wpm:start")}catch(d){}var f=[n,"/wpm","/b",r,s.substring(0,1),".js"].join(""),h=l[s];!function(d){var e=d.src,n=d.async,o=void 0===n||n,r=d.onload,i=d.onerror,a=d.sri,t=document.createElement("script"),s=document.head,l=document.body;t.async=o,t.src=e,a&&(t.integrity=a,t.crossOrigin="anonymous"),r&&t.addEventListener("load",r),i&&t.addEventListener("error",i),s?s.appendChild(t):l?l.appendChild(t):console.error("Did not find a head or body element to append the script")}({src:f,async:!0,onload:function(){if(!function(){var d,e;return Boolean(null===(e=null===(d=window.Shopify)||void 0===d?void 0:d.analytics)||void 0===e?void 0:e.initialized)}()){var n=window.webPixelsManager.init(d)||void 0;if(n){e(n);var o=window.Shopify.analytics;o.replayQueue.forEach((function(d){var e=d[0],o=d[1],r=d[2];n.publishCustomEvent(e,o,r)})),o.replayQueue=[],o.publish=n.publishCustomEvent,o.visitor=n.visitor,o.initialized=!0}}},onerror:function(){var e=d.storefrontBaseUrl.replace(/\/$/,""),n="".concat(e,"/.well-known/shopify/monorail/unstable/produce_batch"),r=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:o||"latest",bundle_target:s,page_url:self.location.href,status:"failed",surface:d.surface,error_msg:"".concat(f," has failed to load")},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(n,r))return!0}catch(d){}var i=new XMLHttpRequest;try{return i.open("POST",n,!0),i.setRequestHeader("Content-Type","text/plain"),i.send(r),!0}catch(d){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1},sri:function(d){return"string"==typeof d&&/^sha384-[A-Za-z0-9+/=]+$/.test(d)}(h)?h:""})}})({shopId: 62892834895,storefrontBaseUrl: "https://velvosa.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",surface: "storefront-renderer",enabledBetaFlags: ["6a396365"],webPixelsConfigList: [{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0290","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0290","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,effectiveTopLevelDomain: "",initData: {"shop":{"name":"$UBAH_URL$LIST","paymentSettings":{"currencyCode":"AED"},"myshopifyDomain":"6ib2n1-a4.myshopify.com","countryCode":"AE","storefrontUrl":"https:\/\/velvosa.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"'$UBAH_URL$LIST/cdn","af0c8899687bba67787e1aa12a3e128004fb2fb9","4a6c08d9w92287e3cpcb236027ma0068f2f",{"modern":"","legacy":""});</script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+<script id="web-pixels-manager-setup">(function d(d,e,n,o,r,i){if(!Boolean(null===(t=null===(a=window.Shopify)||void 0===a?void 0:a.analytics)||void 0===t?void 0:t.replayQueue)){var a,t,s=function(){var d={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},e=d.modern,n=d.legacy,o=navigator.userAgent;return e.test(o)?"modern":(n.test(o),"legacy")}(),l=null!=i?i:{modern:"",legacy:""};window.Shopify=window.Shopify||{};var u=window.Shopify;u.analytics=u.analytics||{};var c=u.analytics;c.replayQueue=[],c.publish=function(d,e,n){return c.replayQueue.push([d,e,n]),!0};try{self.performance.mark("wpm:start")}catch(d){}var f=[n,"/wpm","/b",r,s.substring(0,1),".js"].join(""),h=l[s];!function(d){var e=d.src,n=d.async,o=void 0===n||n,r=d.onload,i=d.onerror,a=d.sri,t=document.createElement("script"),s=document.head,l=document.body;t.async=o,t.src=e,a&&(t.integrity=a,t.crossOrigin="anonymous"),r&&t.addEventListener("load",r),i&&t.addEventListener("error",i),s?s.appendChild(t):l?l.appendChild(t):console.error("Did not find a head or body element to append the script")}({src:f,async:!0,onload:function(){if(!function(){var d,e;return Boolean(null===(e=null===(d=window.Shopify)||void 0===d?void 0:d.analytics)||void 0===e?void 0:e.initialized)}()){var n=window.webPixelsManager.init(d)||void 0;if(n){e(n);var o=window.Shopify.analytics;o.replayQueue.forEach((function(d){var e=d[0],o=d[1],r=d[2];n.publishCustomEvent(e,o,r)})),o.replayQueue=[],o.publish=n.publishCustomEvent,o.visitor=n.visitor,o.initialized=!0}}},onerror:function(){var e=d.storefrontBaseUrl.replace(/\/$/,""),n="".concat(e,"/.well-known/shopify/monorail/unstable/produce_batch"),r=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:o||"latest",bundle_target:s,page_url:self.location.href,status:"failed",surface:d.surface,error_msg:"".concat(f," has failed to load")},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(n,r))return!0}catch(d){}var i=new XMLHttpRequest;try{return i.open("POST",n,!0),i.setRequestHeader("Content-Type","text/plain"),i.send(r),!0}catch(d){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1},sri:function(d){return"string"==typeof d&&/^sha384-[A-Za-z0-9+/=]+$/.test(d)}(h)?h:""})}})({shopId: 62892834895,storefrontBaseUrl: "https://velvosa.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",surface: "storefront-renderer",enabledBetaFlags: ["6a396365"],webPixelsConfigList: [{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0290","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0290","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,effectiveTopLevelDomain: "",initData: {"shop":{"name":"$LIST","paymentSettings":{"currencyCode":"AED"},"myshopifyDomain":"6ib2n1-a4.myshopify.com","countryCode":"AE","storefrontUrl":"https:\/\/velvosa.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"'$LIST/cdn","af0c8899687bba67787e1aa12a3e128004fb2fb9","4a6c08d9w92287e3cpcb236027ma0068f2f",{"modern":"","legacy":""});</script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
 window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
 window.ShopifyAnalytics.meta.currency = 'AED';
 var meta = {"page":{"pageType":"home"}};
@@ -445,7 +445,7 @@ for (var attr in meta) {
 })();</script>
 <script
   defer
-  src="'$UBAH_URL$LIST/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.4.0.min.js"
+  src="'$LIST/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.4.0.min.js"
   data-application="storefront-renderer"
   data-shop-id="62892834895"
   data-render-region="gcp-asia-southeast1"
@@ -1498,7 +1498,7 @@ style="width: 370px; height: 370px; object-fit: contain;" />
 </a>
 </div>
 <div class="link">
-<div id="penUrl" class="pen-url">$UBAH_URL$LIST</div>
+<div id="penUrl" class="pen-url">$LIST</div>
 <button class="copy-link buttonShare" onclick="copyContent()">Copy Link</button>
 </div>
 </div>
@@ -1583,7 +1583,7 @@ petok: "hgZ7hjyfW3.RvTnCwN4hdPDHWyHMQ7bnvYLomTHRizo-604800-0.0.1.1"
 <div class="k24-width-100 k24-pad-side-16">
 <p class="k24-sz-font-14 k24-text-align-start" style="font-weight:bolder;">
 <span class="k24-nd-font" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-<link itemprop="url" href="$UBAH_URL$LIST" />
+<link itemprop="url" href="$LIST" />
 <meta itemprop="priceValidUntil" content="2024-09-22" />
 <meta itemprop='priceCurrency' content='IDR' />
 <meta itemprop='price' content='10000'>Rp 20.000,-
@@ -1594,10 +1594,10 @@ petok: "hgZ7hjyfW3.RvTnCwN4hdPDHWyHMQ7bnvYLomTHRizo-604800-0.0.1.1"
 <!-- END OF PRODUCT PRICE -->
 <!-- CASHBACK -->
 <div class="k24-width-100 k24-df-on k24-pad-side-16">
-<a class="k24-nd-font" href="'$UBAH_URL$LIST/" style="text-decoration: none;">
+<a class="k24-nd-font" href="'$LIST/" style="text-decoration: none;">
 <div class="k24-outline-but-prim" style="padding: 4px 10px;">
 <div style="width: 14px;height:14px;background: #008D49;border-radius: 100%;"></div>
-<p class="k24-text-product-price" style="font-size: 12px;">$UBAH_URL$LIST</p>
+<p class="k24-text-product-price" style="font-size: 12px;">$LIST</p>
 </div>
 </a>
 </div>
@@ -1608,19 +1608,19 @@ petok: "hgZ7hjyfW3.RvTnCwN4hdPDHWyHMQ7bnvYLomTHRizo-604800-0.0.1.1"
 <div class="k24-width-100 k24-height-100 k24-df-on k24-df-direct-column k24-df-align-start k24-flex-wrap k24-gap-6 k24-hide-scrollbar k24-overflow-y-hide k24-overflow-x-auto">
 <div class="k24-width-50 k24-df-on k24-direct-row k24-df-align-start k24-gap-4">
 <img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="$LIST : $UBAH_TITLE">
-<p class="k24-sz-14-font k24-nd-font">Versi Terbaru $UBAH_URL$LIST</p>
+<p class="k24-sz-14-font k24-nd-font">Versi Terbaru $LIST</p>
 </div>
 <div class="k24-width-50 k24-df-on k24-direct-row k24-df-align-start k24-gap-4">
-<img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="RTP AKURAT $UBAH_URL$LIST">
-<p class="k24-sz-14-font k24-nd-font">$UBAH_URL$LIST LOGIN</p>
+<img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="RTP AKURAT $LIST">
+<p class="k24-sz-14-font k24-nd-font">$LIST LOGIN</p>
 </div>
 <div class="k24-width-50 k24-df-on k24-direct-row k24-df-align-start k24-gap-4">
-<img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="LIVECHAT $UBAH_URL$LIST">
-<p class="k24-sz-14-font k24-nd-font">$UBAH_URL$LIST DAFTAR</p>
+<img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="LIVECHAT $LIST">
+<p class="k24-sz-14-font k24-nd-font">$LIST DAFTAR</p>
 </div>
 <div class="k24-width-50 k24-df-on k24-direct-row k24-df-align-start k24-gap-4">
-<img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="LIVECHAT $UBAH_URL$LIST">
-<p class="k24-sz-14-font k24-nd-font">$UBAH_URL$LIST LINK ALTERNATIF</p>
+<img class="lazy" loading="lazy" src="$UBAH_ICON" width="20" height="22" alt="LIVECHAT $LIST">
+<p class="k24-sz-14-font k24-nd-font">$LIST LINK ALTERNATIF</p>
 </div>
 </div>
 </div>
@@ -1640,7 +1640,7 @@ petok: "hgZ7hjyfW3.RvTnCwN4hdPDHWyHMQ7bnvYLomTHRizo-604800-0.0.1.1"
 <table class="list-table" style="font-size: medium !important;">
 <tr style="box-shadow: 0px 15px 20px -28px;">
 <td class="k24-pad-side-16" colspan="2" style="padding-bottom: 1rem;">
-<h2 class="k24-text-product-price k24-nd-font"> Tentang $UBAH_URL$LIST: </h2>
+<h2 class="k24-text-product-price k24-nd-font"> Tentang $LIST: </h2>
 <span itemprop="description">
 <p>$UBAH_DESK</p>
 </span>
@@ -1651,24 +1651,24 @@ petok: "hgZ7hjyfW3.RvTnCwN4hdPDHWyHMQ7bnvYLomTHRizo-604800-0.0.1.1"
 <!-- TAG -->
 <div class="k24-width-100">
 <div class="k24-df-on k24-df-direct-row k24-white-space-nowrap k24-gap-8 k24-overflow-x-auto k24-hide-scrollbar k24-overflow-y-hide k24-scrolling-touch k24-pad-side-16">
-<a style="text-decoration: none;" href="'$UBAH_URL$LIST/">
+<a style="text-decoration: none;" href="'$LIST/">
 <div class="k24-outline-but-prim" style="padding: 1.5px 10px;">
-<p class="k24-text-product-price k24-nd-font"> e-Ticketing $UBAH_URL$LIST Versi 3 </p>
+<p class="k24-text-product-price k24-nd-font"> e-Ticketing $LIST Versi 3 </p>
 </div>
 </a>
-<a style="text-decoration: none;" href="'$UBAH_URL$LIST/">
+<a style="text-decoration: none;" href="'$LIST/">
 <div class="k24-outline-but-prim" style="padding: 1.5px 10px;">
-<p class="k24-text-product-price k24-nd-font"> e-Ticketing $UBAH_URL$LIST Versi 2 </p>
+<p class="k24-text-product-price k24-nd-font"> e-Ticketing $LIST Versi 2 </p>
 </div>
 </a>
-<a style="text-decoration: none;" href="'$UBAH_URL$LIST/">
+<a style="text-decoration: none;" href="'$LIST/">
 <div class="k24-outline-but-prim" style="padding: 1.5px 10px;">
-<p class="k24-text-product-price k24-nd-font"> e-Ticketing $UBAH_URL$LIST Versi 1 </p>
+<p class="k24-text-product-price k24-nd-font"> e-Ticketing $LIST Versi 1 </p>
 </div>
 </a>
-<a style="text-decoration: none;" href="'$UBAH_URL$LIST/">
+<a style="text-decoration: none;" href="'$LIST/">
 <div class="k24-outline-but-prim" style="padding: 1.5px 10px;">
-<p class="k24-text-product-price k24-nd-font"> e-Ticketing $UBAH_URL$LIST Versi 0.5 </p>
+<p class="k24-text-product-price k24-nd-font"> e-Ticketing $LIST Versi 0.5 </p>
 </div>
 </a>
 </div>
@@ -1680,7 +1680,7 @@ petok: "hgZ7hjyfW3.RvTnCwN4hdPDHWyHMQ7bnvYLomTHRizo-604800-0.0.1.1"
 <div class="k24-width-100 k24-pad-side-16">
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
 <div class='k24-df-on k24-direct-column k24-df-justify-between'>
-<h2 class='k24-text-product-price k24-nd-font k24-sz-font-16'>REVIEW APLIKASI $UBAH_URL$LIST</h2>
+<h2 class='k24-text-product-price k24-nd-font k24-sz-font-16'>REVIEW APLIKASI $LIST</h2>
 <p class='k24-sz-font-14 k24-nd-font k24-text-align-end' style='font-weight:bolder;' itemprop='ratingValue'>
 <span class='bintang-review-on-mini'></span> ( 5.0 )
 </p>
@@ -1722,7 +1722,7 @@ cursor: pointer;
 <i class='fa fa-check-circle k24-color-prim' aria-hidden='true'></i>&nbsp; <span class='k24-nd-font'>Pemain Terverifikasi</span>
 </div>
 </div>
-<span>top markotop aplikasi e-Ticketing $UBAH_URL$LIST</span>
+<span>top markotop aplikasi e-Ticketing $LIST</span>
 <br>
 <span>
 <span class='helpfull-2079' style='padding-bottom:10px; color: #4d4d4d;'>
@@ -1738,7 +1738,7 @@ cursor: pointer;
 <img style="display:none;" id="ajax-loader" src="https://www.k24klik.com/images/ajax-loader.gif" alt="loader" />
 </noscript>
 </p>
-<p onclick='window.open("$UBAH_URL$LIST");'>Laporkan Penyalahgunaan</p>
+<p onclick='window.open("$LIST");'>Laporkan Penyalahgunaan</p>
 </span>
 </div>
 <div class="k24-width-100" itemprop="review" itemtype="http://schema.org/Review" itemscope>
@@ -1757,7 +1757,7 @@ cursor: pointer;
 <i class='fa fa-check-circle k24-color-prim' aria-hidden='true'></i>&nbsp; <span class='k24-nd-font'>Pemain Terverifikasi</span>
 </div>
 </div>
-<span>Aplikasi e-Ticketing $UBAH_URL$LIST paling keren</span>
+<span>Aplikasi e-Ticketing $LIST paling keren</span>
 <br>
 <span>
 <span class='helpfull-10052' style='padding-bottom:10px; color: #4d4d4d;'>
@@ -1773,7 +1773,7 @@ cursor: pointer;
 <img style="display:none;" id="ajax-loader" src="https://www.k24klik.com/images/ajax-loader.gif" alt="loader" />
 </noscript>
 </p>
-<p onclick='window.open("$UBAH_URL$LIST");'>Laporkan Penyalahgunaan</p>
+<p onclick='window.open("$LIST");'>Laporkan Penyalahgunaan</p>
 </span>
 </div>
 <div class="k24-width-100" itemprop="review" itemtype="http://schema.org/Review" itemscope>
@@ -1792,7 +1792,7 @@ cursor: pointer;
 <i class='fa fa-check-circle k24-color-prim' aria-hidden='true'></i>&nbsp; <span class='k24-nd-font'>Pemain Terverifikasi</span>
 </div>
 </div>
-<span>wah gila ini sih aplikasi e-ticketing paling keren $UBAH_URL$LIST</span>
+<span>wah gila ini sih aplikasi e-ticketing paling keren $LIST</span>
 <br>
 <span>
 <span class='helpfull-10196' style='padding-bottom:10px; color: #4d4d4d;'>
@@ -1808,7 +1808,7 @@ cursor: pointer;
 <img style="display:none;" id="ajax-loader" src="https://www.k24klik.com/images/ajax-loader.gif" alt="loader" />
 </noscript>
 </p>
-<p onclick='window.open("$UBAH_URL$LIST");'>Laporkan Penyalahgunaan</p>
+<p onclick='window.open("$LIST");'>Laporkan Penyalahgunaan</p>
 </span>
 </div>
 <script type="text/javascript">
@@ -1916,7 +1916,7 @@ else $('.each-' + id).show();
 </div>
 <div class="clearfix"></div>
 <div>
-<a class="k24-prim-but-lg k24-link-white" href="'$UBAH_URL$LIST/" style="padding: 4px 10px;margin-top:8px;text-decoration:none"> Lihat Semua ></a>
+<a class="k24-prim-but-lg k24-link-white" href="'$LIST/" style="padding: 4px 10px;margin-top:8px;text-decoration:none"> Lihat Semua ></a>
 </div>
 </div>
 <hr class="linebreak" />
@@ -1998,7 +1998,7 @@ if (countAll > 5) {
 $("#loader").show();
 }
 var paragraph = document.getElementById("text-header-menu");
-var text = document.createTextNode("e-Ticketing $UBAH_URL$LIST");
+var text = document.createTextNode("e-Ticketing $LIST");
 paragraph.appendChild(text);
 doAnimation('cartPut', 'anim-heartbeat', 5500, 5000);
 startRemove();
@@ -2032,11 +2032,11 @@ loadProductQuestion();
 });
 // Icon Butuh Bantuan : Redirect Ke LiveChat Zendesk
 $('#live-chat-gif').on('click', function() {
-window.open("'$UBAH_URL$LIST/");
+window.open("'$LIST/");
 }); $('#live-chat-gif2').on('click', function() {
-window.open("'$UBAH_URL$LIST/");
+window.open("'$LIST/");
 }); $('#zopim_logo').on('click', function() {
-window.open("'$UBAH_URL$LIST/");
+window.open("'$LIST/");
 }); $('.iklan_lk').live('click', function() {
 var id = $(this).attr('id').replace("iklan_lk", '');
 $.ajax({
@@ -2138,7 +2138,7 @@ whatsapp: "whatsapp://send?text=https%3A%2F%2Fwww.k24klik.com%2Fp%2Fpanadol-cold
 facebook: "https://facebook.com/sharer/sharer.php?p=&u=https%3A%2F%2Fwww.k24klik.com%2Fp%2Fpanadol-cold%26flu-reg-tab-100s-415",
 twitter: "https://twitter.com/share?url=https%3A%2F%2Fwww.k24klik.com%2Fp%2Fpanadol-cold%26flu-reg-tab-100s-415&via=k24klik&text=Butuh obat$LIST : $UBAH_TITLE? Kunjungi",
 linkedin: "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.k24klik.com%2Fp%2Fpanadol-cold%26flu-reg-tab-100s-415&amp;title=$LIST : $UBAH_TITLE",
-clipboard: "$UBAH_URL$LIST"
+clipboard: "$LIST"
 },
 success: function(data) {
 $('#voucher-book').show();
@@ -2247,7 +2247,7 @@ type: "POST",
 url: "https://www.k24klik.com/productPartial/loadProductQuestion",
 data: {
 id: "415",
-name: "$UBAH_URL$LIST"
+name: "$LIST"
 },
 success: function(data) {
 $("#product-question-content").html(data);
@@ -2296,7 +2296,7 @@ shareButton.addEventListener('click', event => {
 if (navigator.share) {
 navigator.share({
 title: '$LIST : $UBAH_TITLE',
-url: '$UBAH_URL$LIST'
+url: '$LIST'
 }).then(() => {
 console.log('Terimakasih sudah berbagi');
 }).catch(console.error);
@@ -2405,37 +2405,37 @@ transform: translateX(0);
 <!-- END OF BOUNCING ICON LIVE CHAT ZOPIM -->
 <!-- FOOTER HOMEPAGE -->
 <div class="k24-width-100 k24-pad-side-16 k24-bgr-clr-white k24-text-align-center k24-mrg-b-16">
-<img class="k24-width-50 k24-mrg-b-16" src="https://upload.wikimedia.org/wikipedia/commons/8/83/OJK_Logo.png" alt="$UBAH_URL$LIST">
+<img class="k24-width-50 k24-mrg-b-16" src="https://upload.wikimedia.org/wikipedia/commons/8/83/OJK_Logo.png" alt="$LIST">
 <a href="javascript:void(0)" id="zopim_logo" class="k24-link-prim">
-<button class="k24-outline-but-prim-2 k24-width-100 k24-t-shadow-unset k24-mrg-b-16"> e-Ticketing $UBAH_URL$LIST </button>
+<button class="k24-outline-but-prim-2 k24-width-100 k24-t-shadow-unset k24-mrg-b-16"> e-Ticketing $LIST </button>
 </a>
 <h4 class="k24-mrg-t-unset k24-mrg-b-8">
 <b>Ikuti Kami</b>
 </h4>
-<a href="'$UBAH_URL$LIST/">
+<a href="'$LIST/">
 <img id="facebook" alt="facebook" class="lazy" data-original="https://www.k24klik.com/redesign/icon/facebook.svg">
 </a>
 <div style="display: inline-block;width: 1%;">&nbsp;</div>
-<a href="'$UBAH_URL$LIST/">
+<a href="'$LIST/">
 <img id="twitter" alt="twitter" class="lazy" data-original="https://www.k24klik.com/redesign/icon/twitter.svg">
 </a>
 <div style="display: inline-block;width: 1%;">&nbsp;</div>
-<a href="'$UBAH_URL$LIST/">
+<a href="'$LIST/">
 <img id="instagram" alt="instagram" class="lazy" data-original="https://www.k24klik.com/redesign/icon/instagram.svg" />
 </a>
 <div style="display: inline-block;width: 1%;">&nbsp;</div>
 </div>
 <div class="k24-width-100 k24-pad-side-16" style="margin-bottom: 80px;">
 <div class="k24-width-100 k24-text-align-center k24-mrg-b-16">
-<h4 style="font-weight: normal;">DOWNLOAD APLIKASI $UBAH_URL$LIST</h4>
-<a href="'$UBAH_URL$LIST/" rel="nofollow">
+<h4 style="font-weight: normal;">DOWNLOAD APLIKASI $LIST</h4>
+<a href="'$LIST/" rel="nofollow">
 <img id="android" alt="download android app K24Klik" class="lazy" data-original="https://www.k24klik.com/redesign/image/playstore.svg" id="androidVersion">
 </a>
 <div style="display: inline-block;width: 1%;">&nbsp;</div>
-<a href="'$UBAH_URL$LIST/" rel="nofollow">
+<a href="'$LIST/" rel="nofollow">
 <img alt="download ios app K24Klik" class="lazy" data-original="https://www.k24klik.com/redesign/image/appstore.svg" id="iosVersion" />
 </a>
-<p class="k24-nd-font k24-sz-font-10 k24-text-align-center k24-mrg-t-16"> © 2016 - 2024 <a class="k24-link-prim" href=""> $UBAH_URL$LIST </a> - e-Ticketing 2024 </p>
+<p class="k24-nd-font k24-sz-font-10 k24-text-align-center k24-mrg-t-16"> © 2016 - 2024 <a class="k24-link-prim" href=""> $LIST </a> - e-Ticketing 2024 </p>
 </div>
 <!-- ABOUT K24KLIK -->
 <!-- END OF ABOUT K24KLIK -->
@@ -2612,14 +2612,14 @@ $('#zopim_logo').on("click", function() {
 // Jika ON_ZOPIM = 1 load script zopim
 // Jika ON_ZOPIM = 0 script tidak di load, pakek popup redirect ke http://tinyurl.com/chat-k24klik
 // Open popout pakek tiny url
-window.open("'$UBAH_URL$LIST/");
+window.open("'$LIST/");
 });
 $('#live-chat-gif').on("click", function() {
 // Config Env. Variable
 // Jika ON_ZOPIM = 1 load script zopim
 // Jika ON_ZOPIM = 0 script tidak di load, pakek popup redirect ke http://tinyurl.com/chat-k24klik
 // Open popout pakek tiny url
-window.open("'$UBAH_URL$LIST/");
+window.open("'$LIST/");
 });
 });
 </script>
